@@ -1,0 +1,4 @@
+Create an Angular 19 application. The HMI has a right menu where a button keeps it state until another is pressed. There is a status bar in the top show alarms and other information. The main area contains some meters which can be adjusted. Try analysing the picture and generate an angular application
+
+
+
