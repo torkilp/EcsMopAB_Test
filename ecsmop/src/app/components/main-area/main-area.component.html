@@ -2,8 +2,8 @@
     <div *ngFor="let mymeter of meters" class="meterT">
       <label>{{ mymeter.name }}</label>
       <span>{{ mymeter.value }}</span>     
-      <meter type="range" [(ngModel)]="mymeter.value" [low]="mymeter.min" [high]="mymeter.max"></meter>
-      <meter type="range" [(ngModel)]="mymeter.value" [min]="mymeter.min" [max]="mymeter.max"></meter>
+      <input type="range" [(ngModel)]="mymeter.value" [min]="mymeter.min" [max]="mymeter.max" orient="vertical"/>
+
 
     </div>
   </div>

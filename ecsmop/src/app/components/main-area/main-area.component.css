@@ -1,4 +1,14 @@
-.meters {
+
+input[type=range][orient=vertical] {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: slider-vertical;
+    width: 16px;
+    vertical-align: bottom;
+}
+
+
+/* .meters {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -23,7 +33,7 @@
     height: 350px;
 
  
-  }
+  } */
 
 
 
