@@ -1,0 +1,23 @@
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 73px;
+    bottom: 0;
+    width: 200px;
+    background: azure; /* Azure blue background */
+    padding: 10px;
+  }
+  .menu button {
+    background-color: #007FFF; /* Stronger blue */
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+  }
+  .menu button.active {
+    background-color: darkblue;
+  }

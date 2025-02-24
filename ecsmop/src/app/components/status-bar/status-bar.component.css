@@ -1,0 +1,17 @@
+.status-bar {
+    height: 70%; /* Reduce height by 20% */
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.alarm-icon {
+    color: yellow;
+    font-size: 1.2em;
+    margin-right: 5px;
+}

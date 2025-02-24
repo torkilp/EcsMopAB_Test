@@ -1,0 +1,5 @@
+<div class="menu">
+  <button *ngFor="let item of menuItems" [class.active]="selectedItem === item" (click)="selectItem(item)">
+    {{ item }}
+  </button>
+</div>
