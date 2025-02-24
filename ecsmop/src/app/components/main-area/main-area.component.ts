@@ -19,3 +19,4 @@ export class MainAreaComponent {
     { name: 'Scav. Air', min: 0, max: 3, value: 1 }
   ];
 }
+
