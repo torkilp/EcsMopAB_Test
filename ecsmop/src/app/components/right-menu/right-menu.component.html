@@ -2,4 +2,5 @@
   <button *ngFor="let item of menuItems" [class.active]="selectedItem === item" (click)="selectItem(item)">
     {{ item }}
   </button>
+  <button (click)="reduceWidth()">Reduce Width</button>
 </div>

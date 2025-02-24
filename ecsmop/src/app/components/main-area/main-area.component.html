@@ -1,11 +1,83 @@
-<div class="top-bar">
-  <div class="top-bar-content">
-    Engine Operation
+<div class="main-layout">
+
+  <div class="row">
+
+    <div class="top-bar">
+      <div class="top-bar-content">
+        Engine Operation
+      </div>
+    </div>
+
   </div>
+
+  <div class="row">
+
+    <div class="column">
+
+      <div class="row">
+        <div class="state-controls">
+          <div class="state-item" *ngFor="let state of states">
+            <label [for]="'state-' + state.label">{{ state.label }}</label>
+            <span id="{{ 'state-' + state.label }}">{{ state.value }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="meters">
+          <div *ngFor="let mymeter of meters" class="meter">
+            <label [for]="'meter-' + mymeter.name">{{ mymeter.name }}</label>
+            <span>{{ mymeter.value }}</span>
+            <input type="range" id="{{ 'meter-' + mymeter.name }}" [(ngModel)]="mymeter.value" [min]="mymeter.min"
+              [max]="mymeter.max" orient="vertical" class="accent" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="column">
+          <div class="control">
+            <label for="hpsState" class="blue-label">HPS</label>
+            <span id="hpsState">{{ hpsState }}</span>
+          </div>
+        </div>
+        <div class="column">
+          <div class="control">
+            <label for="auxBlowers" class="blue-label">Auxiliary Blowers</label>
+            <span id="auxBlowers">{{ auxBlowersState }}</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="column">
+      <div class="row">
+        <div class="column">
+          <div class="controls">
+            <div class="control">
+              <label for="speedRPM" class="blue-label">Speed RPM</label>
+              <input type="range" id="speedRPM" [(ngModel)]="speedRPM" min="0" max="2000" orient="vertical"
+                class="accent" />
+              <span>{{ speedRPM }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="controls">
+            <div class="control">
+              <label for="fuelIndex" class="blue-label">Fuel Index</label>
+              <input type="range" id="fuelIndex" [(ngModel)]="fuelIndex" min="0" max="100" orient="vertical"
+                class="accent" />
+              <span>{{ fuelIndex }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
-<div class="meters">
-  <div *ngFor="let mymeter of meters" class="meter">
-    <label>{{ mymeter.name }}</label>
-    <span>{{ mymeter.value }}</span>
-    <input type="range" [(ngModel)]="mymeter.value" [min]="mymeter.min" [max]="mymeter.max" orient="vertical" class="accent"/>
-  </div>
