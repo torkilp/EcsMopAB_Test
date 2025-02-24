@@ -1,50 +1,55 @@
-
 input[type=range][orient=vertical] {
+    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
     writing-mode: vertical-lr;
     direction: rtl;
-    appearance: slider-vertical;
     width: 16px;
     vertical-align: bottom;
+    /* background: #434343;
+    box-shadow: -80px 0 0 80px #43e5f7;     */
+}
+
+input[type='range'][orient=vertical]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 20px;
+    background-color: grey;
+    color: royalblue;
+    height: 30px;
+    width: 30px;
 }
 
 
-/* .meters {
+.accent {
+    accent-color: #007FFF;
+}
+
+
+
+.meters {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  .meterT {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.meter {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);   
-
-  }
-  .vertical-slider {
-    writing-mode: bt-lr;
-    -webkit-appearance: slider-vertical;
-    width: 20px;
-    height: 350px;
-
- 
-  } */
-
-
-
-
-  /* background-color: blue;
-} */
-
-/* .vertical-slider::-moz-progress-bar {
-    background-color: blue;
+    margin: 0 10px;
 }
 
-.vertical-slider::-ms-fill {
-    background-color: blue;
-} */
+.meter label {
+    margin-bottom: 5px;
+    font-weight: bold; /* Make the labels bold */
+}
+
+.meter span {
+    margin-bottom: 5px;
+}
+
+
+.top-bar {
+    background-color: #007FFF;
+    color: white;
+    width: 100%;
+  }
