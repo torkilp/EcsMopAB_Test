@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grid Layout - Right Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="top-bar">Top Bar</header>
+        <div class="main-content">
+            <section class="content">
+                <button class="menu-toggle" onclick="toggleMenu()">Toggle Menu</button>
+                <p>Main content goes here...</p>
+            </section>
+            <aside class="right-menu" id="rightMenu">
+                <p>Right Menu</p>
+            </aside>
+        </div>
+        <footer class="footer">Footer</footer>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("rightMenu");
+            menu.classList.toggle("collapsed");
+        }
+    </script>
+</body>
+</html>

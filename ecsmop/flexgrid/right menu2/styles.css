@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+.top-bar {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    background: #ddd;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.right-menu {
+    background: #555;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 50px; /* Sticks below the top bar */
+    height: calc(100vh - 100px); /* Adjusts for top bar and footer */
+    transition: width 0.3s ease;
+}
+
+/* Collapsed menu */
+.right-menu.collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+/* Button to toggle menu */
+.menu-toggle {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
