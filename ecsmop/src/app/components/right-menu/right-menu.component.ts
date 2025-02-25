@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./right-menu.component.css'],
   imports: [CommonModule]
 })
-export class RightMenuComponent {
+
+
+export class RightMenuComponent implements OnInit {
   menuItems = ['Alarms', 'Engine', 'Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters', 'Auxiliaries', 'Maintenance', 'Admin'];
   selectedItem = this.menuItems[0];
+
+
+  ngOnInit() {
+    this.reduceWidth();
+  }
 
   selectItem(item: string) {
     this.selectedItem = item;
