@@ -8,12 +8,37 @@ import { Component } from '@angular/core';
   styleUrls: ['./right-menu.component.css'],
   imports: [CommonModule]
 })
+
 export class RightMenuComponent {
-  menuItems = ['Alarms', 'Engine', 'Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters', 'Auxiliaries', 'Maintenance', 'Admin'];
-  selectedItem = this.menuItems[0];
+
+
+  menuItems = [
+    { name: 'Alarms', subMenu: [] },
+    {
+      name: 'Engine',
+      subMenu: ['Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters'],
+      isSubMenuVisible: false
+    },
+    { name: 'Operation', subMenu: [] },
+    { name: 'Status', subMenu: [] },
+    { name: 'Process Info', subMenu: [] },
+    { name: 'Process Adjustment', subMenu: [] },
+    { name: 'Chief Limiters', subMenu: [] },
+    { name: 'Auxiliaries', subMenu: [] },
+    { name: 'Maintenance', subMenu: [] },
+    { name: 'Admin', subMenu: [] }
+  ];
+
+  selectedItem = this.menuItems[0].name;
 
   selectItem(item: string) {
     this.selectedItem = item;
+  }
+
+  toggleSubMenu(item: any) {
+    if (item.name === 'Engine') {
+      item.isSubMenuVisible = !item.isSubMenuVisible;
+    }
   }
 
   reduceWidth() {
@@ -28,3 +53,4 @@ export class RightMenuComponent {
     });
   }
 }
+

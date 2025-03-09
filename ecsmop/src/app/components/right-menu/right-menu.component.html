@@ -2,7 +2,7 @@
   <ul>
     <li *ngFor="let item of menuItems" (click)="toggleSubMenu(item)" (keypress)="toggleSubMenu(item)" class="menu">
       {{ item.name }}
-      <ul *ngIf="item.name === 'Engine' && isEngineSubMenuOpen">
+      <ul *ngIf="item.name === 'Engine' && item.isSubMenuVisible">
         <li *ngFor="let subItem of item.subMenu">
           {{ subItem }}
         </li>
