@@ -1,4 +1,4 @@
-.menu {
+/* .menu {
   list-style-type: none;
   padding: 0;
 }
@@ -20,16 +20,21 @@
 
 .menu>li ul {
   list-style-type: none;
+  background-color: #007FFF;
   padding: 0;
-  margin: 0;
+  margin: 1;
 }
 
 .menu>li ul>li {
   background-color: lightblue;
   color: black;
-  padding: 5px;
-  margin: 2px;
+  padding: 0px;
+  margin: 1px;
 }
+
+.menu>li:hover {
+  background-color: darkblue;
+} */
 
 .reduced-width {
   width: 90% !important;
