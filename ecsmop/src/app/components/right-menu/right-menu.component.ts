@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -9,51 +9,22 @@ import { Component, Renderer2 } from '@angular/core';
   imports: [CommonModule]
 })
 export class RightMenuComponent {
-  constructor(private renderer: Renderer2) { }
-
-
-  menuItems = [
-    {
-      name: 'Alarms',
-      subMenu: []
-    },
-    {
-      name: 'Engine',
-      subMenu: ['Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters']
-    },
-    {
-      name: 'Auxiliaries',
-      subMenu: []
-    },
-    {
-      name: 'Maintenance',
-      subMenu: []
-    },
-    {
-      name: 'Admin',
-      subMenu: []
-    }
-  ];
+  menuItems = ['Alarms', 'Engine', 'Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters', 'Auxiliaries', 'Maintenance', 'Admin'];
   selectedItem = this.menuItems[0];
-  isEngineSubMenuOpen = false;
 
-  toggleSubMenu(item: { name: string; subMenu: string[] }) {
-
-    if (item.name === 'Engine') {
-      this.isEngineSubMenuOpen = !this.isEngineSubMenuOpen;
-    } else {
-      this.isEngineSubMenuOpen = false;
-    }
+  selectItem(item: string) {
     this.selectedItem = item;
   }
 
-
-
   reduceWidth() {
+    const elements = document.querySelectorAll('.operation, .status, .process-info, .process-adjustment, .chief-limits');
+    elements.forEach((element) => {
+      (element as HTMLElement).classList.add('reduced-width');
+    });
+
     const buttons = document.querySelectorAll('.menu button');
     buttons.forEach((button) => {
-      this.renderer.addClass(button, 'reduced-width-button');
+      (button as HTMLElement).classList.add('reduced-width-button');
     });
   }
-
 }
