@@ -1,11 +1,6 @@
 <div class="menu">
-  <!-- <button *ngFor="let item of menuItems" [class.active]="selectedItem === item" (click)="toggleSubMenu(item)">
-    {{ item.name }}
-  </button>
-  <button (click)="reduceWidth()">Reduce Width</button> -->
-
   <ul>
-    <li *ngFor="let item of menuItems" (click)="toggleSubMenu(item)">
+    <li *ngFor="let item of menuItems" (click)="toggleSubMenu(item)" (keypress)="toggleSubMenu(item)" class="menu">
       {{ item.name }}
       <ul *ngIf="item.name === 'Engine' && isEngineSubMenuOpen">
         <li *ngFor="let subItem of item.subMenu">
