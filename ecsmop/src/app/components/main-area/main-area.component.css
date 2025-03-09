@@ -71,11 +71,11 @@ input[type='range'][orient=vertical]::-webkit-slider-thumb {
 
 
 .top-bar {
-    background-color: lightgray;
+    background-color: #007FFF;
     color: white;
     width: 100%;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -118,7 +118,8 @@ input[type='range'][orient=vertical]::-webkit-slider-thumb {
     background-color: #007FFF;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    gap: 10px;
+    border-radius: 0px;
     display: inline-block;
 }
 

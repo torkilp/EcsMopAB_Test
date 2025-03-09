@@ -1,3 +1,7 @@
+<!-- Description: This is the HTML file for the right-menu component. It displays the menu items and sub-menu items. -->
+
+
+
 <div class="menu">
   <ul>
     <li *ngFor="let item of menuItems" (click)="toggleSubMenu(item)" (keypress)="toggleSubMenu(item)" class="menu">
@@ -9,5 +13,4 @@
       </ul>
     </li>
   </ul>
-
 </div>

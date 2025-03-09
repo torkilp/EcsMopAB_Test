@@ -19,11 +19,6 @@ export class RightMenuComponent {
       subMenu: ['Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters'],
       isSubMenuVisible: false
     },
-    { name: 'Operation', subMenu: [] },
-    { name: 'Status', subMenu: [] },
-    { name: 'Process Info', subMenu: [] },
-    { name: 'Process Adjustment', subMenu: [] },
-    { name: 'Chief Limiters', subMenu: [] },
     { name: 'Auxiliaries', subMenu: [] },
     { name: 'Maintenance', subMenu: [] },
     { name: 'Admin', subMenu: [] }

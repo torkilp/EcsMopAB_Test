@@ -24,14 +24,14 @@ html {
 }
 
 .content {
-    background: #ddd;
+    background: azure;
     flex: 1;
     padding: 0px;
     overflow-y: auto;
 }
 
 .right-menu {
-    background: #555;
+    background: azure;
     color: white;
     width: 200px;
     padding: 0px;
