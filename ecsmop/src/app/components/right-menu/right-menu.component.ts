@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,30 +8,52 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right-menu.component.css'],
   imports: [CommonModule]
 })
+export class RightMenuComponent {
+  constructor(private renderer: Renderer2) { }
 
 
-export class RightMenuComponent implements OnInit {
-  menuItems = ['Alarms', 'Engine', 'Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters', 'Auxiliaries', 'Maintenance', 'Admin'];
+  menuItems = [
+    {
+      name: 'Alarms',
+      subMenu: []
+    },
+    {
+      name: 'Engine',
+      subMenu: ['Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters']
+    },
+    {
+      name: 'Auxiliaries',
+      subMenu: []
+    },
+    {
+      name: 'Maintenance',
+      subMenu: []
+    },
+    {
+      name: 'Admin',
+      subMenu: []
+    }
+  ];
   selectedItem = this.menuItems[0];
+  isEngineSubMenuOpen = false;
 
+  toggleSubMenu(item: { name: string; subMenu: string[] }) {
 
-  ngOnInit() {
-    this.reduceWidth();
-  }
-
-  selectItem(item: string) {
+    if (item.name === 'Engine') {
+      this.isEngineSubMenuOpen = !this.isEngineSubMenuOpen;
+    } else {
+      this.isEngineSubMenuOpen = false;
+    }
     this.selectedItem = item;
   }
 
-  reduceWidth() {
-    const elements = document.querySelectorAll('.operation, .status, .process-info, .process-adjustment, .chief-limits');
-    elements.forEach((element) => {
-      (element as HTMLElement).classList.add('reduced-width');
-    });
 
+
+  reduceWidth() {
     const buttons = document.querySelectorAll('.menu button');
     buttons.forEach((button) => {
-      (button as HTMLElement).classList.add('reduced-width-button');
+      this.renderer.addClass(button, 'reduced-width-button');
     });
   }
+
 }

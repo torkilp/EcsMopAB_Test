@@ -18,9 +18,7 @@
         <div class="state-controls">
           <div class="state-item" *ngFor="let state of states">
             <label [for]="'state-' + state.label">{{ state.label }}</label>
-            <div class="blue-label-value">
-              <span id="{{ 'state-' + state.label }}">{{ state.value }}</span>
-            </div>
+            <span id="{{ 'state-' + state.label }}">{{ state.value }}</span>
           </div>
         </div>
       </div>
@@ -28,51 +26,26 @@
       <div class="row">
         <div class="meters">
           <div *ngFor="let mymeter of meters" class="meter">
-
-            <label [for]="'meter-' + mymeter.name" class="blue-label">{{ mymeter.name }}</label>
-            <div class="blue-label-value" style="width:100%; text-align: center;">
-              <span>{{ mymeter.value }}</span>
-            </div>
+            <label [for]="'meter-' + mymeter.name">{{ mymeter.name }}</label>
+            <span>{{ mymeter.value }}</span>
             <input type="range" id="{{ 'meter-' + mymeter.name }}" [(ngModel)]="mymeter.value" [min]="mymeter.min"
               [max]="mymeter.max" orient="vertical" class="accent" />
           </div>
-
         </div>
       </div>
 
       <div class="row">
 
         <div class="column">
-          <div class="row">
-            <div class="control">
-              <label for="hpsState" class="blue-label">HPS</label>
-              <div class="row" style="width:100%">
-                <div class="column" style="width:100%">
-                  <div class="blue-label-value">
-                    <span id="hpsState">{{ hpsState }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="control">
+            <label for="hpsState" class="blue-label">HPS</label>
+            <span id="hpsState">{{ hpsState }}</span>
           </div>
         </div>
         <div class="column">
-          <div class="row">
-            <div class="control">
-              <label for="auxBlowers" class="blue-label">Auxiliary Blowers</label>
-              <div class="row">
-                <div class="column">
-                  <div class="blue-label-value">
-                    <span id="auxBlowers" class="blue-label-value">{{ auxBlowersState }}</span>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="blue-label-value">
-                    <span id="auxBlowers" class="blue-label-value">{{ auxBlowersState }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="control">
+            <label for="auxBlowers" class="blue-label">Auxiliary Blowers</label>
+            <span id="auxBlowers">{{ auxBlowersState }}</span>
           </div>
         </div>
 
@@ -86,11 +59,9 @@
           <div class="controls">
             <div class="control">
               <label for="speedRPM" class="blue-label">Speed RPM</label>
-              <div class="blue-label-value" style="width:100%; text-align: center;">
-                <span>{{ speedRPM }}</span>
-              </div>
               <input type="range" id="speedRPM" [(ngModel)]="speedRPM" min="0" max="2000" orient="vertical"
                 class="accent" />
+              <span>{{ speedRPM }}</span>
             </div>
           </div>
         </div>
@@ -98,11 +69,9 @@
           <div class="controls">
             <div class="control">
               <label for="fuelIndex" class="blue-label">Fuel Index</label>
-              <div class="blue-label-value" style="width:100%; text-align: center;">
-                <span>{{ fuelIndex }}</span>
-              </div>
               <input type="range" id="fuelIndex" [(ngModel)]="fuelIndex" min="0" max="100" orient="vertical"
                 class="accent" />
+              <span>{{ fuelIndex }}</span>
             </div>
           </div>
         </div>

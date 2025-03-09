@@ -1,6 +1,18 @@
 <div class="menu">
-  <button *ngFor="let item of menuItems" [class.active]="selectedItem === item" (click)="selectItem(item)">
-    {{ item }}
+  <!-- <button *ngFor="let item of menuItems" [class.active]="selectedItem === item" (click)="toggleSubMenu(item)">
+    {{ item.name }}
   </button>
-  <button (click)="reduceWidth()">Reduce Width</button>
+  <button (click)="reduceWidth()">Reduce Width</button> -->
+
+  <ul>
+    <li *ngFor="let item of menuItems" (click)="toggleSubMenu(item)">
+      {{ item.name }}
+      <ul *ngIf="item.name === 'Engine' && isEngineSubMenuOpen">
+        <li *ngFor="let subItem of item.subMenu">
+          {{ subItem }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+
 </div>
