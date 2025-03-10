@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-right-menu',
   templateUrl: './right-menu.component.html',
   styleUrls: ['./right-menu.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink]
 })
 
 export class RightMenuComponent {
@@ -15,9 +16,53 @@ export class RightMenuComponent {
     {
       name: 'Alarms',
       subMenu: [{ name: 'Alarm List', route: 'alarm-list' },
-      { name: 'Event Log', route: 'event-log' },
-      { name: 'Manual Vut-Out List', route: 'manual-vut-out-list' },
-      { name: 'Channel List', route: 'channel-list' }],
+      { name: 'Event Log', route: 'alarm-eventlog' },
+      { name: 'Manual Cut-Out List', route: 'alarm-cutoutlist' },
+      { name: 'Channel List', route: 'alarm-channellist' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Engine',
+      subMenu: [{ name: 'Operation', route: '' },
+      { name: 'Status', route: 'engine-status' },
+      { name: 'Process Info', route: 'engine-processinfo' },
+      { name: 'Process Adjustment', route: '' },
+      { name: 'Chief Limiters', route: '' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Auxiliaries',
+      subMenu: [{ name: 'Hydralic System', route: '' },
+      { name: 'Scavenge Air', route: '' },
+      { name: 'Secound Fuel System', route: '' },
+      { name: 'Cylinder Lubrication', route: '' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Maintenance',
+      subMenu: [{ name: 'System View I/O List', route: '' },
+      { name: 'Invalid IO Channels', route: '' },
+      { name: 'Network Status', route: '' },
+      { name: 'Function Test', route: '' },
+      { name: 'Trouble Shooting', route: '' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Admin',
+      subMenu: [{ name: 'Set Time', route: '' },
+      { name: 'About', route: '' },
+      { name: 'License Agreement', route: '' },
+      { name: 'Update', route: '' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Power Off',
+      subMenu: [],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'System Options Operator',
+      subMenu: [],
       isSubMenuVisible: false
     }
   ];

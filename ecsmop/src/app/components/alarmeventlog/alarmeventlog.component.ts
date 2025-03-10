@@ -5,7 +5,7 @@ import { NgFor, NgIf } from '@angular/common';
 
 
 @Component({
-  selector: 'app-network',
+  selector: 'alarm-eventlog',
   imports: [NgFor, NgIf],
   templateUrl: './alarmeventlog.component.html',
   styleUrl: './alarmeventlog.component.css'

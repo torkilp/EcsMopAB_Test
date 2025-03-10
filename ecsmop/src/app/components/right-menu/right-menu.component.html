@@ -7,8 +7,9 @@
     <li *ngFor="let item of menuItems" class="menu" (click)="toggleSubMenu(item)" (keypress)="toggleSubMenu(item)">
       {{ item.name }}
       <ul *ngIf="item.isSubMenuVisible" class="menu">
-        <li *ngFor="let subItem of item.subMenu" class="menu" (click)="toggleSubMenu(item)" (keypress)="toggleSubMenu(item)">
-          {{ subItem }}
+        <li *ngFor="let subItem of item.subMenu" class="menu" (click)="toggleSubMenu(item)"
+          (keypress)="toggleSubMenu(item)">
+          <a href="#" [routerLink]="[subItem.route, {outlets: {}}]"><span>{{ subItem.name }}</span></a>
         </li>
       </ul>
     </li>

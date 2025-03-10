@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+
 
 
 
 
 @Component({
-  standalone: true,
-  selector: 'app-network',
-  imports: [NgFor, NgIf],
+  selector: 'alarm-channellist',
   templateUrl: './alarmchannellist.component.html',
   styleUrl: './alarmchannellist.component.css'
 })

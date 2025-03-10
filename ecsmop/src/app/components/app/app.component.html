@@ -1,16 +1,18 @@
 <!-- <app-status-bar></app-status-bar> -->
 <div class="container">
-  
+
   <header class="top-bar">
     <app-status-bar></app-status-bar>
-  </header> 
+  </header>
   <div class="main-content">
     <section class="content">
+      <router-outlet></router-outlet>
       <app-main-area></app-main-area>
+
     </section>
     <aside class="right-menu"><app-right-menu></app-right-menu></aside>
-</div>
-<footer class="footer">Footer</footer>
+  </div>
+  <footer class="footer">Footer</footer>
 
   <!-- <app-main-area></app-main-area>
   <app-right-menu></app-right-menu>   -->
