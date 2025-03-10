@@ -13,15 +13,35 @@ export class RightMenuComponent {
 
 
   menuItems = [
-    { name: 'Alarms', subMenu: [] },
+    { name: 'Alarms', 
+      subMenu: ['Alarm List', 'Event Log', 'Manual Vut-Out List', 'Channel List'],
+      isSubMenuVisible: false
+    },
     {
       name: 'Engine',
       subMenu: ['Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters'],
       isSubMenuVisible: false
     },
-    { name: 'Auxiliaries', subMenu: [] },
-    { name: 'Maintenance', subMenu: [] },
-    { name: 'Admin', subMenu: [] }
+    { name: 'Auxiliaries', 
+      subMenu: ['Hydralic System', 'Scavenge Air', 'Secound Fuel System', 'Cylinder Lubrication'],
+      isSubMenuVisible: false 
+    },
+    { name: 'Maintenance', 
+      subMenu: ['System View I/O List', 'Invalid IO Channels', 'Network Status', 'Function Test', 'Trouble Shooting'],
+      isSubMenuVisible: false 
+    },
+    { name: 'Admin', 
+      subMenu: ['Set Time', 'About', 'License Agreement', 'Update'],
+      isSubMenuVisible: false 
+    },
+    { name: 'Power Off',
+      subMenu: [],
+      isSubMenuVisible: false 
+    },
+    { name: 'System Options Operator',
+      subMenu: [],
+      isSubMenuVisible: false 
+    }        
   ];
 
   selectedItem = this.menuItems[0].name;
@@ -30,10 +50,25 @@ export class RightMenuComponent {
     this.selectedItem = item;
   }
 
-  toggleSubMenu(item: any) {
-    if (item.name === 'Engine') {
-      item.isSubMenuVisible = !item.isSubMenuVisible;
+
+  toggleSubMenu(item: any): void {
+
+    // console.log(item.name + typeof(item));
+    // console.debug(item.name + typeof(item));
+
+    if (Array.isArray(item)) {
+      return;
     }
+
+    this.menuItems.forEach(menuItem => {
+
+      if (menuItem !== item) {
+        menuItem.isSubMenuVisible = false;
+      }
+    });
+
+    item.isSubMenuVisible = !item.isSubMenuVisible;
+
   }
 
   reduceWidth() {

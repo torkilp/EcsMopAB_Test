@@ -1,54 +1,13 @@
 <!-- Description: This is the HTML file for the right-menu component. It displays the menu items and sub-menu items. -->
 
 
-<style>
-  .menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
 
-  .menu>li {
-    padding: 10px;
-    background-color: #007FFF;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-
-    margin: 0;
-  }
-
-  .menu>li:focus,
-  .menu>li:active {
-    background-color: darkblue;
-  }
-
-  .menu>li:hover {
-    background-color: #007FFF;
-  }
-
-  .menu>li>ul {
-    background-color: #007FFF;
-    color: white;
-    padding-left: 20px;
-  }
-
-  .menu>li>ul>li {
-    padding: 10px;
-    background-color: steelblue;
-    color: white;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .menu>li>ul>li:hover {
-    background-color: #d0d0d0;
-  }
-</style>
 <div class="menu">
   <ul class="menu">
     <li *ngFor="let item of menuItems" class="menu" (click)="toggleSubMenu(item)" (keypress)="toggleSubMenu(item)">
       {{ item.name }}
-      <ul *ngIf="item.name === 'Engine' && item.isSubMenuVisible" class="menu">
-        <li *ngFor="let subItem of item.subMenu" class="menu">
+      <ul *ngIf="item.isSubMenuVisible" class="menu">
+        <li *ngFor="let subItem of item.subMenu" class="menu" (click)="toggleSubMenu(item)" (keypress)="toggleSubMenu(item)">
           {{ subItem }}
         </li>
       </ul>
