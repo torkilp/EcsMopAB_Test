@@ -15,7 +15,7 @@ export class AlarmChanneListComponent implements OnInit {
 
 
   ngOnInit() {
-
+    console.log('Alarm Channel List');
   }
 
 
