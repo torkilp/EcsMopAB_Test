@@ -9,7 +9,7 @@
       <ul *ngIf="item.isSubMenuVisible" class="menu">
         <li *ngFor="let subItem of item.subMenu" class="menu" (click)="toggleSubMenu(item)"
           (keypress)="toggleSubMenu(item)">
-          <a href="#" [routerLink]="[subItem.route, {outlets: {}}]"><span>{{ subItem.name }}</span></a>
+          <a href="#" [routerLink]="[subItem.route, {outlets: {}}]"  routerLinkActive="active"><span>{{ subItem.name }}</span></a>
         </li>
       </ul>
     </li>

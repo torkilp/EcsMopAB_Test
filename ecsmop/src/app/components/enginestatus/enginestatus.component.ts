@@ -7,10 +7,10 @@ import { NgFor, NgIf } from '@angular/common';
 @Component({
   selector: 'engine-status',
   imports: [NgFor, NgIf],
-  templateUrl: './engineprocessinfo.component.html',
-  styleUrl: './engineprocessinfo.component.css'
+  templateUrl: './enginestatus.component.html',
+  styleUrl: './enginestatus.component.css'
 })
-export class EngineProcessInfoComponent implements OnInit {
+export class EngineStatusComponent implements OnInit {
   title = 'Network Status';
 
 

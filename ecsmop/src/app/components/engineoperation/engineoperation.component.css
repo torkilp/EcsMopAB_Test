@@ -1,0 +1,128 @@
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/*  Controls  */
+
+input[type=range][orient=vertical] {
+    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
+    writing-mode: vertical-lr;
+    direction: rtl;
+    width: 16px;
+    vertical-align: bottom;
+
+}
+
+input[type='range'][orient=vertical]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 20px;
+    background-color: grey;
+    color: royalblue;
+    height: 30px;
+    width: 30px;
+}
+
+
+.accent {
+    accent-color: #007FFF;
+}
+
+
+.meters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.meter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    margin-bottom: 10px;
+}
+
+.meter label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    /* Make the labels bold */
+}
+
+.meter span {
+    margin-bottom: 5px;
+}
+
+
+.top-bar {
+    background-color: #007FFF;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.horizontal-slider {
+    width: 200px;
+}
+
+.state-controls {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.state-item label {
+    background-color: #007FFF;
+    color: white;
+    padding: 5px;
+    display: block;
+}
+
+.blue-label {
+    background-color: #007FFF;
+    color: white;
+    padding: 5px;
+    gap: 10px;
+    border-radius: 0px;
+    display: inline-block;
+}
+
+.state-item {
+    margin-bottom: 10px;
+}
