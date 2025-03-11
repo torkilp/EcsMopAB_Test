@@ -7,6 +7,9 @@ import { AlarmEventLogComponent } from './app/components/alarmeventlog/alarmeven
 import { EngineProcessInfoComponent } from './app/components/engineprocessinfo/engineprocessinfo.component';
 import { EngineNetworkStatusComponent } from './app/components/enginenetworkstatus/enginenetworkstatus.component';
 import { EngineOperationComponent } from './app/components/engineoperation/engineoperation.component';
+import { AuxScavengAirComponent } from './app/components/auxscavengeair/auxscavengair.component';
+import { AuxSecondFuelSystemComponent } from './app/components/auxsecoundfuelsystem/auxsecondfuelsystem.component';
+import { AuxHydralicSystemComponent } from './app/components/auxhydralicsystem/auxhydralicsystem.component';
 
 
 export const ecsmop_routes: Routes = [
@@ -20,4 +23,7 @@ export const ecsmop_routes: Routes = [
     { path: 'engine-status', component: EngineProcessInfoComponent },
     { path: 'engine-processinfo', component: EngineProcessInfoComponent },
     { path: 'engine-networkstatus', component: EngineNetworkStatusComponent },
+    { path: 'aux-scavengair', component: AuxScavengAirComponent },    
+    { path: 'aux-secondfuelsystem', component: AuxSecondFuelSystemComponent }, 
+    { path: 'aux-hydralicsystem', component: AuxHydralicSystemComponent }, 
 ];

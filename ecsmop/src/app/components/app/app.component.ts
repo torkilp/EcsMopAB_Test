@@ -8,7 +8,7 @@ import { MainAreaComponent } from '../main-area/main-area.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, StatusBarComponent, RightMenuComponent, MainAreaComponent],
+  imports: [RouterOutlet, StatusBarComponent, RightMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

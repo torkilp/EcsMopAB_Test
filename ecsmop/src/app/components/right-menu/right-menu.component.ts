@@ -32,10 +32,10 @@ export class RightMenuComponent {
     },
     {
       name: 'Auxiliaries',
-      subMenu: [{ name: 'Hydralic System', route: '' },
-      { name: 'Scavenge Air', route: '' },
-      { name: 'Secound Fuel System', route: '' },
-      { name: 'Cylinder Lubrication', route: '' }],
+      subMenu: [{ name: 'Hydralic System', route: 'aux-hydralicsystem' },
+      { name: 'Scavenge Air', route: 'aux-scavengair' },
+      { name: 'Secound Fuel System', route: 'aux-secondfuelsystem' },
+      { name: 'Cylinder Lubrication', route: 'aux-auxcyllubrication' }],
       isSubMenuVisible: false
     },
     {

@@ -6,12 +6,11 @@ import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'engine-status',
-  imports: [NgFor, NgIf],
   templateUrl: './enginestatus.component.html',
   styleUrl: './enginestatus.component.css'
 })
 export class EngineStatusComponent implements OnInit {
-  title = 'Network Status';
+  title = 'Engine Status';
 
 
   ngOnInit() {

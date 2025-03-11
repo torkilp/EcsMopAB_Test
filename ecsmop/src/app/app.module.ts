@@ -16,6 +16,8 @@ import { EngineStatusComponent } from './components/enginestatus/enginestatus.co
 import { EngineProcessInfoComponent } from './components/engineprocessinfo/engineprocessinfo.component';
 import { AuxCylLubricationComponent } from './components/auxcyllubrication/auxcyllubrication.component';
 import { AuxHydralicSystemComponent } from './components/auxhydralicsystem/auxhydralicsystem.component';
+import { AuxScavengAirComponent } from './components/auxscavengeair/auxscavengair.component';
+import { AuxSecondFuelSystemComponent } from './components/auxsecoundfuelsystem/auxsecondfuelsystem.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { AuxHydralicSystemComponent } from './components/auxhydralicsystem/auxhy
     EngineProcessInfoComponent,
     AuxHydralicSystemComponent,
     AuxCylLubricationComponent,
+    AuxScavengAirComponent,
+    AuxSecondFuelSystemComponent,
   ],
   imports: [
     BrowserModule,
