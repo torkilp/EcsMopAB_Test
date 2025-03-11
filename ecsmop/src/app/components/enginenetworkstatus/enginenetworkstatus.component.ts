@@ -6,7 +6,7 @@ import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'engine-networkstatus',
-  imports: [NgFor, NgIf],
+ standalone: true,
   templateUrl: './enginenetworkstatus.component.html',
   styleUrl: './enginenetworkstatus.component.css'
 })

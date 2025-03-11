@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'engine-operation',
-  standalone: false,
+  standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './engineoperation.component.html',
   styleUrls: ['./engineoperation.component.css'],

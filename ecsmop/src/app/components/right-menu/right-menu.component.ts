@@ -23,7 +23,7 @@ export class RightMenuComponent {
     },
     {
       name: 'Engine',
-      subMenu: [{ name: 'Operation', route: '' },
+      subMenu: [{ name: 'Operation', route: 'engine-operation' },
       { name: 'Status', route: 'engine-status' },
       { name: 'Process Info', route: 'engine-processinfo' },
       { name: 'Process Adjustment', route: '' },

@@ -6,7 +6,7 @@ import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'engine-processinfo',
-  imports: [NgFor, NgIf],
+  standalone: true,
   templateUrl: './engineprocessinfo.component.html',
   styleUrl: './engineprocessinfo.component.css'
 })

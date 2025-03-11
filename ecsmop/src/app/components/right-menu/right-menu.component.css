@@ -17,6 +17,7 @@
 .menu>li:active {
   background-color: darkblue;
   color: white;
+
 }
 
 .menu>li:hover {
@@ -31,7 +32,7 @@
 
 .menu>li>ul>li {
   padding: 10px;
-  background-color: steelblue;
+  background-color: deepskyblue;
   color: white;
   border-bottom: 1px solid #ccc;
 }
@@ -46,4 +47,9 @@
 
 .reduced-width-button {
   width: 90%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

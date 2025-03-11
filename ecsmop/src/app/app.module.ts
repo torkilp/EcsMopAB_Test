@@ -10,6 +10,12 @@ import { AlarmListComponent } from './components/alarmlist/alarmlist.component';
 import { AlarmChanneListComponent } from './components/alarmchannellist/alarmchannellist.component';
 import { AlarmCutOutComponent } from './components/alarmcutoutlist/alarmcutoutlist.component';
 import { AlarmEventLogComponent } from './components/alarmeventlog/alarmeventlog.component';
+import { EngineNetworkStatusComponent } from './components/enginenetworkstatus/enginenetworkstatus.component';
+import { EngineOperationComponent } from './components/engineoperation/engineoperation.component';
+import { EngineStatusComponent } from './components/enginestatus/enginestatus.component';
+import { EngineProcessInfoComponent } from './components/engineprocessinfo/engineprocessinfo.component';
+import { AuxCylLubricationComponent } from './components/auxcyllubrication/auxcyllubrication.component';
+import { AuxHydralicSystemComponent } from './components/auxhydralicsystem/auxhydralicsystem.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { AlarmEventLogComponent } from './components/alarmeventlog/alarmeventlog
     AlarmListComponent,
     AlarmChanneListComponent,
     AlarmCutOutComponent,
-    AlarmEventLogComponent
+    AlarmEventLogComponent,
+    EngineNetworkStatusComponent,
+    EngineOperationComponent,
+    EngineStatusComponent,
+    EngineProcessInfoComponent,
+    AuxHydralicSystemComponent,
+    AuxCylLubricationComponent,
   ],
   imports: [
     BrowserModule,
