@@ -10,6 +10,11 @@ import { EngineOperationComponent } from './app/components/engineoperation/engin
 import { AuxScavengAirComponent } from './app/components/auxscavengeair/auxscavengair.component';
 import { AuxSecondFuelSystemComponent } from './app/components/auxsecoundfuelsystem/auxsecondfuelsystem.component';
 import { AuxHydralicSystemComponent } from './app/components/auxhydralicsystem/auxhydralicsystem.component';
+import { EngineStatusComponent } from './app/components/enginestatus/enginestatus.component';
+import { AdminAboutComponent } from './app/components/adminabout/adminabout.component';
+import { AdminUpdateComponent } from './app/components/adminupdate/adminupdate.component';
+import { AdminLicenseComponent } from './app/components/adminlicense/adminlicense.component';
+import { AdminSetTimeComponent } from './app/components/adminsettime/adminsettime.component';
 
 
 export const ecsmop_routes: Routes = [
@@ -20,10 +25,14 @@ export const ecsmop_routes: Routes = [
     { path: 'alarm-channellist', component: AlarmChanneListComponent },
     { path: 'alarm-cutoutlist', component: AlarmCutOutComponent },
     { path: 'engine-operation', component: EngineOperationComponent },
-    { path: 'engine-status', component: EngineProcessInfoComponent },
+    { path: 'engine-status', component: EngineStatusComponent },
     { path: 'engine-processinfo', component: EngineProcessInfoComponent },
     { path: 'engine-networkstatus', component: EngineNetworkStatusComponent },
-    { path: 'aux-scavengair', component: AuxScavengAirComponent },    
-    { path: 'aux-secondfuelsystem', component: AuxSecondFuelSystemComponent }, 
-    { path: 'aux-hydralicsystem', component: AuxHydralicSystemComponent }, 
+    { path: 'aux-scavengair', component: AuxScavengAirComponent },
+    { path: 'aux-secondfuelsystem', component: AuxSecondFuelSystemComponent },
+    { path: 'aux-hydralicsystem', component: AuxHydralicSystemComponent },
+    { path: 'admin-about', component: AdminAboutComponent },
+    { path: 'admin-update', component: AdminUpdateComponent },
+    { path: 'admin-license', component: AdminLicenseComponent },
+    { path: 'admin-settime', component: AdminSetTimeComponent },
 ];

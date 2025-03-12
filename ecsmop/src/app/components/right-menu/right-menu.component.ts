@@ -26,7 +26,7 @@ export class RightMenuComponent {
       subMenu: [{ name: 'Operation', route: 'engine-operation' },
       { name: 'Status', route: 'engine-status' },
       { name: 'Process Info', route: 'engine-processinfo' },
-      { name: 'Process Adjustment', route: '' },
+      { name: 'Process Adjustment', route: 'engine-operation' },
       { name: 'Chief Limiters', route: '' }],
       isSubMenuVisible: false
     },
@@ -49,10 +49,10 @@ export class RightMenuComponent {
     },
     {
       name: 'Admin',
-      subMenu: [{ name: 'Set Time', route: '' },
-      { name: 'About', route: '' },
-      { name: 'License Agreement', route: '' },
-      { name: 'Update', route: '' }],
+      subMenu: [{ name: 'Set Time', route: 'admin-settime' },
+      { name: 'About', route: 'admin-about' },
+      { name: 'License Agreement', route: 'admin-license' },
+      { name: 'Update', route: 'admin-update' }],
       isSubMenuVisible: false
     },
     {

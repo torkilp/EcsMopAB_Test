@@ -18,6 +18,10 @@ import { AuxCylLubricationComponent } from './components/auxcyllubrication/auxcy
 import { AuxHydralicSystemComponent } from './components/auxhydralicsystem/auxhydralicsystem.component';
 import { AuxScavengAirComponent } from './components/auxscavengeair/auxscavengair.component';
 import { AuxSecondFuelSystemComponent } from './components/auxsecoundfuelsystem/auxsecondfuelsystem.component';
+import { AdminUpdateComponent } from './components/adminupdate/adminupdate.component';
+import { AdminSetTimeComponent } from './components/adminsettime/adminsettime.component';
+import { AdminAboutComponent } from './components/adminabout/adminabout.component';
+import { AdminLicenseComponent } from './components/adminlicense/adminlicense.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { AuxSecondFuelSystemComponent } from './components/auxsecoundfuelsystem/
     AuxCylLubricationComponent,
     AuxScavengAirComponent,
     AuxSecondFuelSystemComponent,
+    AdminUpdateComponent,
+    AdminSetTimeComponent,
+    AdminAboutComponent,
+    AdminLicenseComponent
   ],
   imports: [
     BrowserModule,
