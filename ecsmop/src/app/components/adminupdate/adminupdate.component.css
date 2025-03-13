@@ -1,0 +1,70 @@
+/* Work*/
+.tabview_view {
+    flex: 1;
+    flex-grow: 1;
+    display: flex;
+    background: rgb(210, 15, 54);
+
+}
+
+#tp1 {
+    flex: 1;
+    flex-grow: 1;
+    /* display: flex; */
+    height: 100%;
+    color: white;
+    background: rgb(20, 200, 220);
+}
+
+
+/* component-specific styles.css */
+:host ::ng-deep .p-tabview {
+    flex: 1;
+    flex-grow: 1;
+    height: 80%;
+    background: rgb(20, 220, 160);
+}
+
+:host ::ng-deep .p-tabview .p-tabview-panels {
+    flex: 1;
+    flex-grow: 1;
+    height: 100%;
+    background: rgb(43, 20, 220);
+}
+
+/* body {
+    .ui-table {
+        .ui-table-tbody {
+            > tr {
+                background: #afcce0;
+            }
+  
+            > tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+        }
+    }
+  } */
+
+/* .p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even) {
+    background: #90aad3;
+  }
+  
+  .p-datatable .p-datatable-tbody > tr {
+    background: #ffffff;
+  } */
+
+:host ::ng-deep.p-datatable tr:nth-child(even) {
+    background-color: rgb(200, 236, 248);
+}
+
+.pr-column-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.pr-column {
+    color: darkblue;
+    text-align: center;
+    font-weight: bold;
+}
