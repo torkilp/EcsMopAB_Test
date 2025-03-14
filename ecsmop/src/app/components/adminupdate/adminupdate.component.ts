@@ -8,12 +8,15 @@ import { SoftwareUpdate } from '../../entities/softwareupdate';
 @Component({
   selector: 'admin-update',
   templateUrl: './adminupdate.component.html',
+  imports: [NgFor],
   styleUrl: './adminupdate.component.css'
 })
 export class AdminUpdateComponent implements OnInit {
   title = 'Admin Update';
 
   softwareupdatelist: Array<SoftwareUpdate> = new Array<SoftwareUpdate>();
+
+  selectedSwUpdate: SoftwareUpdate = new SoftwareUpdate();
 
   constructor() { }
 
@@ -30,7 +33,9 @@ export class AdminUpdateComponent implements OnInit {
 
   }
 
-
+  selectUpdate(softwareupdate: SoftwareUpdate): void {
+    console.log(softwareupdate);
+  } 
 
 
 }
