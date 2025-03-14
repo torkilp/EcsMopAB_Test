@@ -70,13 +70,6 @@ input[type='range'][orient=vertical]::-webkit-slider-thumb {
 }
 
 
-.top-bar {
-    background-color: #007FFF;
-    color: white;
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-}
 
 
 .controls {

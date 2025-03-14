@@ -1,5 +1,13 @@
 
 
+# Felxgrid
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 https://css-tricks.com/introduction-fr-css-unit/
+
+
+# Bootstrap
+https://www.techiediaries.com/angular-bootstrap/
+https://getbootstrap.com/docs/4.0/layout/grid/
+
+# angular Felxgrid
