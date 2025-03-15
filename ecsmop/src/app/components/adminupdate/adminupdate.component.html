@@ -1,19 +1,17 @@
 <div class="main-layout">
 
     <div class="row">
-    
-        <div class="col-12">
-    
-            <!-- Your content here -->
-
-            <div class="row">
-                <div class="top-bar">
-                    <div class="top-bar-content">
-                        Update Software
-                    </div>
-                </div>
+        <div class="top-bar">
+            <div class="top-bar-content">
+                Update Software
             </div>
-    
+        </div>
+    </div>
+
+
+    <div class="row flex-grow-1" style="flex: 1 1 auto;">
+
+        <div class="col-12">
             <div class="row flex-grow-1">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -26,39 +24,40 @@
                     </li>
                 </ul>
 
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="updates" role="tabpanel" aria-labelledby="updates-tab">
-                    <!-- Content for Updates panel -->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="updates" role="tabpanel" aria-labelledby="updates-tab">
+                        <!-- Content for Updates panel -->
 
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Id</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let update of softwareupdatelist; let i = index" [class.selected]="selectedSwUpdate === update" (click)="selectUpdate(update)">
-                                <th scope="row">{{ i + 1 }}</th>
-                                <td>{{ update.id }}</td>
-                                <td>{{ update.description }}</td>
-                                <td>{{ update.date }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let update of softwareupdatelist; let i = index"
+                                    [class.selected]="selectedSwUpdate === update" (click)="selectUpdate(update)">
+                                    <th scope="row">{{ i + 1 }}</th>
+                                    <td>{{ update.id }}</td>
+                                    <td>{{ update.description }}</td>
+                                    <td>{{ update.date }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                </div>
-                <div class="tab-pane fade" id="installed" role="tabpanel" aria-labelledby="installed-tab">
-                    <!-- Content for Installed panel -->
-                    dfgdsfg
-                    dfgdsfg
+                    </div>
+                    <div class="tab-pane fade" id="installed" role="tabpanel" aria-labelledby="installed-tab">
+                        <!-- Content for Installed panel -->
+                        dfgdsfg
+                        dfgdsfg
+                    </div>
                 </div>
             </div>
-        </div>
         </div> <!-- Close the row flex-grow-1 div -->
-    </div>  
+    </div>
 
 
     <div class="row">
@@ -71,9 +70,9 @@
             <button class="btn btn-primary">View Report</button>
         </div>
     </div>
-    
-        
-    
 
-    
+
+
+
+
 </div>
