@@ -17,11 +17,13 @@ html {
     padding: 0px;
     height: 50px;
     flex-shrink: 0;
+    width: 100%;
 }
 
 .main-content {
     display: flex;
     flex: 1;
+    width: 100%;
     overflow: hidden;
     background: azure;
 }
@@ -29,8 +31,9 @@ html {
 .content {
     background: azure;
     flex: 1;
+    width: 100%;
     padding: 0px;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .right-menu {
@@ -49,5 +52,3 @@ html {
     height: 50px;
     flex-shrink: 0;
 }
-
-
