@@ -1,5 +1,85 @@
-<div class="container-fluid overflow-hidden">
-    <h2>Engine Status</h2>
+<div class="flex_container">
+
+
+    <div class="row" style="height: 50px;">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                Engine Status
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="nav nav-tabs nav-pills nav-fill" id="myTab" style="height: fit-content;">
+
+        <li class="nav-item">
+            <a class="nav-link active" id="updates-tab" data-bs-toggle="tab" href="#updates" role="tab"
+                aria-controls="updates" aria-selected="true">Status</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="installed-tab" data-bs-toggle="tab" href="#installed" role="tab"
+                aria-controls="installed" aria-selected="false">Cylinder Valve Status</a>
+        </li>
+    </ul>
+
+    <div class="tab-content flex-grow-1 d-flex flex-column" id="myTabContent">
+
+        <div class="tab-pane fade show active" id="updates" role="tabpanel" aria-labelledby="updates-tab">
+            <!-- Content for Updates panel -->
+
+            <div class="row flex-grow-1" style="height: fit-content;">
+
+                <!-- Start Conditions Column -->
+                <div class="col-md-3 border-end p-3">
+                    <h5>Start Conditions</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Main Starting Valve in Service Position</li>
+                        <li class="list-group-item">Main Starting Valve Blocked</li>
+                        <li class="list-group-item">Start Air Distribution System in Service</li>
+                        <li class="list-group-item">Start Air Distribution System Blocked</li>
+                        <li class="list-group-item">Start Air Pressure</li>
+                        <li class="list-group-item">Control Air Pressure</li>
+                        <li class="list-group-item">Control Air Vented</li>
+                        <li class="list-group-item">Turning Gear</li>
+                        <li class="list-group-item">Aux Blowers</li>
+                        <li class="list-group-item">Hyd. power Supply</li>
+                        <li class="list-group-item">Hyd. Pressure</li>
+                    </ul>
+                </div>
+
+                <!-- SVG Diagram Area -->
+                <div class="col-md-9 d-flex justify-content-center align-items-center p-3">
+                    <div class="svg-container">
+                        <svg width="100%" height="400px" xmlns="http://www.w3.org/2000/svg"
+                            style="border: 1px solid #ccc;">
+                            <!-- Example SVG Content -->
+                            <circle cx="50%" cy="50%" r="100" fill="lightblue" />
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="20"
+                                fill="#333">
+                                Diagram
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="installed" role="tabpanel" aria-labelledby="installed-tab">
+            <!-- Content for Installed panel -->
+            dfgdsfg
+            dfgdsfg
+        </div>
+
+
+
+    </div>
+
+    <div class="row justify-content-center" style="width: 100%; height: 40px;">
+        <div class="col d-flex justify-content-between">
+
+            <button class="btn btn-primary flex-fill mx-2">Details</button>
+        </div>
+    </div>
+
 
 
 </div>
