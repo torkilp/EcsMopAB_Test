@@ -1,5 +1,17 @@
 
 
+# Felxgrid
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 https://css-tricks.com/introduction-fr-css-unit/
+
+
+# Bootstrap
+https://www.techiediaries.com/angular-bootstrap/
+https://getbootstrap.com/docs/4.0/layout/grid/
+
+
+https://stackoverflow.com/questions/206652/how-to-create-div-to-fill-all-space-between-header-and-footer-div
+
+
+# angular Felxgrid

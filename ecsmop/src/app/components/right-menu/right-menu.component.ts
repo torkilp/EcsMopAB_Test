@@ -1,19 +1,135 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-right-menu',
   templateUrl: './right-menu.component.html',
   styleUrls: ['./right-menu.component.css'],
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink]
 })
+
 export class RightMenuComponent {
-  menuItems = ['Alarms', 'Engine', 'Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters', 'Auxiliaries', 'Maintenance', 'Admin'];
-  selectedItem = this.menuItems[0];
+
+  menuItems = [
+    {
+      name: 'Alarms',
+      subMenu: [{ name: 'Alarm List', route: 'alarm-list' },
+      { name: 'Event Log', route: 'alarm-eventlog' },
+      { name: 'Manual Cut-Out List', route: 'alarm-cutoutlist' },
+      { name: 'Channel List', route: 'alarm-channellist' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Engine',
+      subMenu: [{ name: 'Operation', route: 'engine-operation' },
+      { name: 'Status', route: 'engine-status' },
+      { name: 'Process Info', route: 'engine-processinfo' },
+      { name: 'Process Adjustment', route: 'engine-operation' },
+      { name: 'Chief Limiters', route: '' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Auxiliaries',
+      subMenu: [{ name: 'Hydralic System', route: 'aux-hydralicsystem' },
+      { name: 'Scavenge Air', route: 'aux-scavengair' },
+      { name: 'Secound Fuel System', route: 'aux-secondfuelsystem' },
+      { name: 'Cylinder Lubrication', route: 'aux-auxcyllubrication' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Maintenance',
+      subMenu: [{ name: 'System View I/O List', route: '' },
+      { name: 'Invalid IO Channels', route: '' },
+      { name: 'Network Status', route: '' },
+      { name: 'Function Test', route: '' },
+      { name: 'Trouble Shooting', route: '' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Admin',
+      subMenu: [{ name: 'Set Time', route: 'admin-settime' },
+      { name: 'About', route: 'admin-about' },
+      { name: 'License Agreement', route: 'admin-license' },
+      { name: 'Update', route: 'admin-update' }],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Power Off',
+      subMenu: [],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'System Options Operator',
+      subMenu: [],
+      isSubMenuVisible: false
+    }
+  ];
+
+  menuItems1 = [
+    {
+      name: 'Alarms',
+      subMenu: ['Alarm List', 'Event Log', 'Manual Vut-Out List', 'Channel List'],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Engine',
+      subMenu: ['Operation', 'Status', 'Process Info', 'Process Adjustment', 'Chief Limiters'],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Auxiliaries',
+      subMenu: ['Hydralic System', 'Scavenge Air', 'Secound Fuel System', 'Cylinder Lubrication'],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Maintenance',
+      subMenu: ['System View I/O List', 'Invalid IO Channels', 'Network Status', 'Function Test', 'Trouble Shooting'],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Admin',
+      subMenu: ['Set Time', 'About', 'License Agreement', 'Update'],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'Power Off',
+      subMenu: [],
+      isSubMenuVisible: false
+    },
+    {
+      name: 'System Options Operator',
+      subMenu: [],
+      isSubMenuVisible: false
+    }
+  ];
+
+  selectedItem = this.menuItems[0].name;
 
   selectItem(item: string) {
     this.selectedItem = item;
+  }
+
+
+  toggleSubMenu(item: any): void {
+
+    // console.log(item.name + typeof(item));
+    // console.debug(item.name + typeof(item));
+
+    if (Array.isArray(item)) {
+      return;
+    }
+
+    this.menuItems.forEach(menuItem => {
+
+      if (menuItem !== item) {
+        menuItem.isSubMenuVisible = false;
+      }
+    });
+
+    item.isSubMenuVisible = !item.isSubMenuVisible;
+
   }
 
   reduceWidth() {
@@ -28,3 +144,4 @@ export class RightMenuComponent {
     });
   }
 }
+

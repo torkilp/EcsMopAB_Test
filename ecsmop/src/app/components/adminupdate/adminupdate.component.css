@@ -1,0 +1,18 @@
+/* Work*/
+
+
+.flex_container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-bar {
+    background-color: #007FFF;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
